@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* color: azure; */
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: url("./images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  min-height: 650px;
+}
+#first_section {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+  align-items: center;
+  padding: 0 50px;
+  width: 80%;
+  margin: auto;
+  color: white;
+  /* border: 2px solid green; */
+}
+
+#menu{
+  display: flex;
+  gap: 50px;
+}
+
+.menu_links{
+  color: white;
+}
+
+#bars {
+  cursor: pointer;
+  display: none;
+}
+#heading1 {
+  border: 2px solid white;
+  width: 300px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  padding: 20px 70px 20px 70px;
+  font-size: larger;
+}
+.heading1 {
+  font-weight: 400;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: azure;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#second_section {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  margin-top: 150px;
+  /* border: 2px solid red; */
+}
+
+.content {
+  /* position: absolute; */
+  /* border: 2px solid red; */
+  padding: 50px;
+  width: 300px;
+  height: 200px;
+  font-weight: 300;
+  background-color: white;
+  margin-left: -200px;
+  margin-top: 200px;
+}
+
+#third_section {
+  width: 70%;
+  /* border: 2px solid blue; */
+  margin: auto;
+  margin-top: 50px;
+}
+
+#top_section {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 70px;
+}
+#seeAll {
+  height: 30px;
+  background-color: white;
+  border: 2px solid black;
+  padding: 3px 18px;
+}
+
+#seeAll2 {
+  display: none;
+  height: 30px;
+  background-color: white;
+  border: 2px solid black;
+  padding: 3px 18px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+#images {
+  display: grid;
+  grid-template-columns: repeat(4, 1.5fr);
+  padding: 10px;
+  gap: 20px 10px;
+}
+.plainText {
+  margin-top: -80px;
+  font-size: 30px;
+  color: white;
+  font-weight: 200;
+}
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  align-items: center;
+}
+
+.socialMedia i{
+  margin: 5px;
+}
+
+.footer_list {
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.copyright{
+  margin-top: 30px;
+}
+
+#creations {
+  font-weight: 200;
+}
+@media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
+  #bars {
+    display: block;
+  }
+  #bars.activeOnClick .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #bars.activeOnClick .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #bars.activeOnClick .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  #menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: transparent;
+    color: azure;
+    align-items: center;
+    width: 100%;
+    transition: 1s ease;
+    padding-bottom: 20px;
+    z-index: 1;
+  }
+  #menu.activeOnClick {
+    left: 0;
+  }
+  #second_section {
+    flex-direction: column;
+  }
+  .content {
+    /* border: 2px solid red; */
+    align-items: center;
+    margin: auto;
+  }
+  #images {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #seeAll {
+    display: none;
+    height: 30px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 3px 18px;
+  }
+
+  #creations {
+    text-align: center;
+    font-weight: 200;
+  }
+
+  #seeAll2 {
+    display: block;
+    height: 30px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 3px 18px;
+    position: relative;
+    align-items: center;
+    left: 40%;
+    top: 50%;
+  }
+  .footer_first{
+    display: block;
+    flex-direction: column;
+  }
+  .footer_second{
+    display: block;
+    flex-direction: column;
+  }
+  .footer_list{
+    display: block;
+    flex-direction: column;
+    padding-bottom:20px;
+  }
+  .content_list{
+    /* border: 2px solid white; */
+    padding-bottom:10px ;
+  }
+  footer{
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .menu_links{
+    color: white;
+  }
+}
